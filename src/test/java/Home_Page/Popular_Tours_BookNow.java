@@ -27,7 +27,7 @@ public class Popular_Tours_BookNow {
     }
 
     @Test
-    public void viewAllHotel() throws InterruptedException {
+    public void tourBookNow() throws InterruptedException {
         wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 
         WebElement clickCard = wait.until(

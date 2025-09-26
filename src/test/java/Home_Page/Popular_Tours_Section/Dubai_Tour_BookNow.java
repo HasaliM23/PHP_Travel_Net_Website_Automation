@@ -1,4 +1,4 @@
-package Home_Page;
+package Home_Page.Popular_Tours_Section;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -13,7 +13,7 @@ import org.testng.annotations.Test;
 
 import java.time.Duration;
 
-public class Popular_Tours_BookNow {
+public class Dubai_Tour_BookNow {
 
     WebDriver driver;
     WebDriverWait wait;
@@ -27,7 +27,7 @@ public class Popular_Tours_BookNow {
     }
 
     @Test
-    public void tourBookNow() throws InterruptedException {
+    public void Dubai_Book_Now() throws InterruptedException {
         wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 
         WebElement clickCard = wait.until(
@@ -36,10 +36,10 @@ public class Popular_Tours_BookNow {
                 )
         );
 
-// Scroll to element
+        // Scroll to element
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", clickCard);
 
-// Add a small wait for animations
+        // Add a small wait for animations
         Thread.sleep(500);
 
         clickCard.click();

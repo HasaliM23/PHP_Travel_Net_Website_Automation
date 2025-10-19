@@ -25,7 +25,7 @@ public class FindBestToursTest {
     }
 
     @Test
-    public void verifyFindTour() throws InterruptedException {
+    public void verifyFindDubaiTour() throws InterruptedException {
 
 
         WebElement place = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[@role='combobox']")));
@@ -55,13 +55,91 @@ public class FindBestToursTest {
         WebElement clickPlus = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='tours-search']/div/div[3]/div/div/div/div/div[1]/div/div/div[2]")));
         clickPlus.click();
 
-        //click submit button
+        //click search button
 
-        WebElement submit = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@type='submit']")));
-        submit.click();
+        WebElement search = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@type='submit']")));
+        search.click();
 
 
 
+
+    }
+
+    @Test
+    public void verifyFindThailandTour() throws InterruptedException {
+
+        WebElement place = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[@role='combobox']")));
+        place.click();
+
+        WebElement searchBox = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@role='searchbox']")));
+        searchBox.sendKeys("Thailand");
+        Thread.sleep(2000);
+
+        WebElement dubaiOption = wait.until(ExpectedConditions.elementToBeClickable(
+                By.xpath("//ul[contains(@id,'select2-tours_city-results')]//li[contains(.,'Thailand')]")
+        ));
+        dubaiOption.click();
+        //Select the date
+
+        WebElement date = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@id = 'date']")));
+        date.click();
+        date.sendKeys("12-10-2025");
+
+        //select travelers
+
+        WebElement travelers = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@href='#']")));
+        travelers.click();
+
+        //click plus button
+
+        WebElement clickPlus = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='tours-search']/div/div[3]/div/div/div/div/div[1]/div/div/div[2]")));
+        clickPlus.click();
+
+        //click search button
+
+        WebElement search = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@type='submit']")));
+        search.click();
+
+
+    }
+
+    @Test
+
+    public void verifyFindDelhiTour() throws InterruptedException {
+
+        WebElement place = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[@role='combobox']")));
+        place.click();
+
+        WebElement searchBox = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@role='searchbox']")));
+        searchBox.sendKeys("Delhi");
+        Thread.sleep(2000);
+
+        WebElement delhiOption = wait.until(ExpectedConditions.elementToBeClickable(
+                By.xpath("//li[text()='Delhi, ']")
+        ));
+
+        delhiOption.click();
+
+        //Select the date
+
+        WebElement date = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@id = 'date']")));
+        date.click();
+        date.sendKeys("12-10-2025");
+
+        //select travelers
+
+        WebElement travelers = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@href='#']")));
+        travelers.click();
+
+        //click plus button
+
+        WebElement clickPlus = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='tours-search']/div/div[3]/div/div/div/div/div[1]/div/div/div[2]")));
+        clickPlus.click();
+
+        //click search button
+
+        WebElement search = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@type='submit']")));
+        search.click();
 
     }
 }

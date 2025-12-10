@@ -58,8 +58,8 @@ public class NewBlogFunctionTests {
     @Test
     public void verifynewBlogFunction6cardtest() throws InterruptedException {
 
-        WebElement sixthcard = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//img[@alt='blog-img'])[23]")));
-        sixthcard.click();
+        WebElement sixthcarde = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//img[@alt='blog-img'])[23]")));
+        sixthcarde.click();
     }
 
 
